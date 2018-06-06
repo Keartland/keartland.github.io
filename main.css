@@ -5,7 +5,7 @@ body * {
 }
 
 body {
-  background-color: #D7DFEA;
+  background-color: #e3e3e3;
   background-size: cover;
 }
 
@@ -17,7 +17,6 @@ body {
 
 .frame {
   width: 400px;
-  background-color: red;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0px 2px 55px rgba(0, 0, 0, 0.2);
@@ -26,7 +25,7 @@ body {
 .row {
   height: 90px;
   width: 400px;
-  background-color: #525863;
+  background-color: rgba(53, 57, 66, 0.6);
   border-left: solid 8px #3C404B;
   transition: all .5s ease;
   padding: 25px 30px 0px 30px;
@@ -38,26 +37,24 @@ body {
   cursor: pointer;
 }
 .active {
-  height: 300px;
-  background-color: #201F24;
+  background-color: #353942;
   width: 420px;
   border: none;
   transition: all .5s ease;
-  padding: 25px 40px 0px 50px;
+  padding: 25px 40px 50px 50px;
   overflow: hidden;
 }
 a {
     text-decoration: none;
-    display: block;
-    width: 75px;
-    height: 25px;
     background: #4E9CAF;
-    padding: 5px;
-    text-align: center;
+    padding: 7px;
     border-radius: 10px;
-    color: white;
+    text-align: center;
     font-size: 12px;
     font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 h1 {
   text-align: left;
@@ -66,15 +63,13 @@ h1 {
   color: #C7CDD8;
   text-transform: uppercase;
   letter-spacing: 1px;
-  float: left;
 }
 
 h2 {
   text-align: left;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   color: #dce3ef;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  float: left;
+  letter-spacing: 2px;
 }
