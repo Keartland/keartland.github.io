@@ -2,15 +2,22 @@
 var request = new Request('https://api.github.com/zen', {
 	headers: new Headers({})
 });
-
-fetch("https://api.github.com/users/keartland/repos").then(r => r.json())
+links = []
+fetch("https://api.github.com/users/keartland/repos")
+.then(r => r.json())
   .then(function(data){
     for (var i = 0; i < data.length; i++) {
       cur = data[i]
       lang = cur["language"]
       if(lang =="JavaScript" && cur["name"]!="keartland.github.io"){
         console.log("added: https://keartland.github.io/"+cur["name"])
-        document.getElementById("repos").innerHTML += "<li><a href=\""+"https://keartland.github.io/"+cur["name"]+"\">" + cur["name"].replace(/-/g," ") + "</a></li>"
+        document.getElementById("repos").innerHTML += "<div onclick=\"run(event)\" class=\"row\"><h1>" + cur["name"].replace(/-/g," ") + "</h1></div>"
+				links.push("https://keartland.github.io/"+cur["name"])
       }
     }
-  })
+	})
+function run(event){
+	mouseY = event.clientY - 70;
+	window.location = links[Math.floor(mouseY/90)];
+	console.log(links[Math.floor(mouseY/90)])
+}
