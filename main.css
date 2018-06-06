@@ -5,7 +5,7 @@ body * {
 }
 
 body {
-  background-color: #e3e3e3;
+  background-color: #49a078;
   background-size: cover;
 }
 
@@ -25,7 +25,7 @@ body {
 .row {
   height: 90px;
   width: 400px;
-  background-color: rgba(53, 57, 66, 0.6);
+  background-color: rgba(53, 57, 66, 0.4);
   border-left: solid 8px #3C404B;
   transition: all .5s ease;
   padding: 25px 30px 0px 30px;
