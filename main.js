@@ -1,17 +1,16 @@
-
-var request = new Request('https://api.github.com/zen', {
-	headers: new Headers({})
-});
 info = {}
 fetch("https://api.github.com/users/keartland/repos")
 .then(r => r.json())
   .then(function(data){
+		console.log("loaded")
+		console.log(data.length)
     for (var i = 0; i < data.length; i++) {
       cur = data[i]
       lang = cur["language"]
+			console.log(cur["name"])
       if(lang =="JavaScript" || lang =="CSS"|| lang =="HTML"){
 				if (cur["name"]!="keartland.github.io"){
-        	document.getElementById("repos").innerHTML += "<div onclick=\"run(this.id)\" id=\"" + cur["name"] +"\" class=\"row\"><h1>" + cur["name"].replace(/-/g," ") + "</h1></div>"
+        	document.getElementById("repos").innerHTML += "<div onclick=\"run(this.id)\" id=\"" + cur["name"] +"\" class=\"row\"><h1 class=\"titles\">" + cur["name"].replace(/-/g," ") + "</h1></div>"
 					info[cur["name"]] = {"desc":cur["description"], "url":"https://keartland.github.io/"+cur["name"] }
       	}
     	}

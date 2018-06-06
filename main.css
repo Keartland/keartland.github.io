@@ -56,12 +56,23 @@ a {
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-h1 {
+.titles {
   text-align: left;
   font-size: 16px;
   font-weight: 400;
   color: #C7CDD8;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.top {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 32px;
+  font-weight: 400;
+  color: #d5dbe8;
+  text-transform: uppercase;
+  text-decoration: underline dotted;
   letter-spacing: 1px;
 }
 
