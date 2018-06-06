@@ -9,12 +9,13 @@ fetch("https://api.github.com/users/keartland/repos")
     for (var i = 0; i < data.length; i++) {
       cur = data[i]
       lang = cur["language"]
-      if(lang =="JavaScript" && cur["name"]!="keartland.github.io"){
-        console.log("added: https://keartland.github.io/"+cur["name"])
-        document.getElementById("repos").innerHTML += "<div onclick=\"run(event)\" class=\"row\"><h1>" + cur["name"].replace(/-/g," ") + "</h1></div>"
-				links.push("https://keartland.github.io/"+cur["name"])
-      }
-    }
+      if(lang =="JavaScript" || lang =="CSS"|| lang =="HTML"){
+				if (cur["name"]!="keartland.github.io"){
+        	document.getElementById("repos").innerHTML += "<div onclick=\"run(event)\" class=\"row\"><h1>" + cur["name"].replace(/-/g," ") + "</h1></div>"
+					links.push("https://keartland.github.io/"+cur["name"])
+      	}
+    	}
+		}
 	})
 function run(event){
 	mouseY = event.clientY - 70;
