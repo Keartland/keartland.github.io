@@ -1,2 +1,2 @@
 # keartland.github.io
-Index for all my projects
+An index for all my projects that I upload to github, hosted on keart.land
