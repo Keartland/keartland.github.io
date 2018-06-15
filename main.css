@@ -17,7 +17,7 @@ body {
 }
 
 .frame {
-  width: 400px;
+  width: 450px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0px 2px 55px rgba(0, 0, 0, 0.2);
@@ -31,7 +31,7 @@ body {
 
 .row {
   height: 90px;
-  width: 400px;
+  width: 450px;
   background-color: rgba(53, 57, 66, 0.4);
   border-left: solid 8px #3C404B;
   transition: all .5s ease;
@@ -45,7 +45,7 @@ body {
 }
 .active {
   background-color: #353942;
-  width: 420px;
+  width: 475px;
   border: none;
   transition: all .5s ease;
   padding: 25px 40px 50px 50px;
