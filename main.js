@@ -23,7 +23,7 @@ function run(id){
 }
 function toggle(id, on){
   ele = document.getElementById(id)
-  add = "<h2>" + info[id]["desc"] + "</h2><a href=\"" + info[id]["url"] + "\">GOTO</a><span>   </span><a href=\"" + info[id]["source"] + "\">Source</a><span>   </span><a href=\"" + info[id]["download"] + "\">Download</a>"
+  add = "<h2>" + info[id]["desc"] + "</h2><a href=\"" + info[id]["url"] + "\">GOTO</a><span>   </span><a href=\"" + info[id]["source"] + "\">Source</a><span>   </span><a onclick=\"if(window.confirm(\'Are you sure you want to download?\')){window.open('" + info[id]["download"] + "');} else{console.log(\'Canceled\');}\" href=\"#\">Download</a>"
   ele.className = on ? 'active' : 'row';
   ele.innerHTML = on ? ele.innerHTML + add : ele.innerHTML.replace(add,"");
 }

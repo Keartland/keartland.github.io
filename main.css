@@ -30,6 +30,7 @@ body {
 }
 
 .row {
+  color: #C7CDD8;
   height: 90px;
   width: 450px;
   background-color: rgba(53, 57, 66, 0.4);
@@ -40,6 +41,7 @@ body {
 
 .row:hover {
   width: 460px;
+  color:#DCE2EF;
   background-color: #353942;
   border-left: solid 8px #353942;
   cursor: pointer;
@@ -68,7 +70,6 @@ a {
   text-align: left;
   font-size: 16px;
   font-weight: 400;
-  color: #C7CDD8;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
