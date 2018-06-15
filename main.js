@@ -6,7 +6,8 @@ fetch("https://api.github.com/users/keartland/repos?sort=%22updated%22").then(r 
       lang = cur["language"]
       if(lang =="JavaScript" || lang =="CSS"|| lang =="HTML"){
         document.getElementById("repos").innerHTML += "<div onclick=\"run(this.id)\" id=\"" + cur["name"] +"\" class=\"row\"><h1 class=\"titles\">" + cur["name"].replace(/-/g," ") + "</h1></div>"
-        info[cur["name"]] = {"desc":cur["description"], "url":cur["homepage"], "source":cur["html_url"], "download":cur["html_url"] + "/archive/master.zip" }
+        info[cur["name"]] = {"desc":cur["description"], "url":cur["name"], "source":cur["html_url"], "download":cur["html_url"] + "/archive/master.zip" }
+        console.log(cur)
         string += "window.open('" + info[cur["name"]]["download"] + "');"
     	}
 		}
