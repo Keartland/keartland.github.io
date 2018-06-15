@@ -1,18 +1,17 @@
 info = {}
-fetch("https://api.github.com/users/keartland/repos")
-.then(r => r.json())
-  .then(function(data){
+fetch("https://api.github.com/users/keartland/repos?sort=%22updated%22").then(r => r.json()).then(function(data){
     for (var i = 0; i < data.length; i++) {
       cur = data[i]
       lang = cur["language"]
       if(lang =="JavaScript" || lang =="CSS"|| lang =="HTML"){
-				if (cur["name"]!="keartland.github.io"){
-        	document.getElementById("repos").innerHTML += "<div onclick=\"run(this.id)\" id=\"" + cur["name"] +"\" class=\"row\"><h1 class=\"titles\">" + cur["name"].replace(/-/g," ") + "</h1></div>"
-					info[cur["name"]] = {"desc":cur["description"], "url":cur["homepage"], "source":cur["html_url"] }
-      	}
+			if (cur["name"]!="keartland.github.io"){
+				document.getElementById("repos").innerHTML += "<div onclick=\"run(this.id)\" id=\"" + cur["name"] +"\" class=\"row\"><h1 class=\"titles\">" + cur["name"].replace(/-/g," ") + "</h1></div>"
+				info[cur["name"]] = {"desc":cur["description"], "url":cur["homepage"], "source":cur["html_url"] }
+			}
     	}
-		}
-	})
+	}
+	
+})
 
 function run(id){
 	var ele = document.getElementById(id)
@@ -21,7 +20,7 @@ function run(id){
 		temp = ele.innerHTML
 		ele.setAttribute('class', 'active');
 		ele.innerHTML = temp + add
-	}else if(ele.className == "active"){
+	} else if(ele.className == "active"){
 		ele.setAttribute('class', 'row');
 		ele.innerHTML = ele.innerHTML.replace(add,"")
 	}
