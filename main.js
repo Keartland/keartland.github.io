@@ -10,8 +10,9 @@ fetch("https://api.github.com/users/keartland/repos?sort=%22updated%22").then(r 
         string += "window.open('" + info[cur["name"]]["download"] + "');"
     	}
 		}
-    document.getElementById("repos").innerHTML += "<div onclick=\"if(window.confirm(\'Are you sure you want to download?\')){" + string + "} else{console.log(\'Canceled\');}\" class=\"row\"><h1 style=\"color:#eaf1ff\" class=\"titles\">Download all</h1></div>"
-  })
+    document.getElementById("repos").innerHTML += "<div onclick=\"window.open('https://projecteuler.net/problem=" + (Math.floor(Math.random() * 600) + 1)+"')\" class=\"row\"><h1 style=\"color:#eaf1ff\" class=\"titles\">Random Euler Project Question</h1></div>" 
+    document.getElementById("repos").innerHTML += "<div onclick=\"if(window.confirm(\'Are you sure you want to download?\')){" + string + "} else{console.log(\'Canceled\');}\" class=\"row\"><h1 style=\"color:#eaf1ff\" class=\"titles\">Download all</h1></div>" 
+})
 
 function run(id){
   for(i=0;i < Object.keys(info).length;i++){
