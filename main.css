@@ -2,6 +2,7 @@ html,
 body * {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
 }
 
 body {
@@ -64,14 +65,12 @@ a {
     font-size: 12px;
     font-weight: 400;
     color: white;
-    text-transform: uppercase;
     letter-spacing: 1px;
   }
 .titles {
   text-align: left;
   font-size: 16px;
   font-weight: 400;
-  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
@@ -81,7 +80,6 @@ a {
   font-size: 32px;
   font-weight: 400;
   color: #d5dbe8;
-  text-transform: uppercase;
   text-decoration: underline dotted;
   letter-spacing: 1px;
 }
@@ -91,6 +89,5 @@ h2 {
   font-size: 12px;
   font-weight: 400;
   color: #dce3ef;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
