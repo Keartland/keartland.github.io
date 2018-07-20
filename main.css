@@ -6,7 +6,7 @@ body * {
 }
 
 body {
-  background-color: #49a078;
+  transition: all .5s ease;
   background-size: cover;
 
 }
