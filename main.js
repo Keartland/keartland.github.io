@@ -1,6 +1,6 @@
 info = {}
 string = ""
-data = getAnchorData("http://keart.land/#access_token=BQDG85ltn2ws06JPSuKRCxPk6VIfkPu30MXXd3wXmJ6pgTunBMFEvNxCb193hgxXNySq130A8b87hf9FiFbJwixDacsAxwdkpvbLkPCOYQ4CfrOw3fELOeP8jtSM2B-xR6OeHDUtWmQP9BYckqR4Opbjp4KTYFNCDM4&token_type=Bearer&expires_in=3600")//document.location.href)
+data = getAnchorData(document.location.href)
 if(data.length != 0){
   prompt("Spotify API key", data[0].value);
 }
