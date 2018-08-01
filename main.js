@@ -1,5 +1,6 @@
 info = {}
 string = ""
+console.log(document.location.href)
 colours = ["#49a078","#499ca0","#4970a0","#4d5da0","#7849a0","#a0499c","#a04970","#a04d49","#a07849","#9ca049","#70a049","#49a04d"]
 document.body.style.background = colours[0]
 fetch("https://api.github.com/users/keartland/repos?sort=%22updated%22").then(r => r.json()).then(function(data){
