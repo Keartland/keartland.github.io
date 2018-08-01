@@ -1,6 +1,9 @@
 info = {}
 string = ""
-console.log(document.location.href)
+data = getAnchorData("http://keart.land/#access_token=BQDG85ltn2ws06JPSuKRCxPk6VIfkPu30MXXd3wXmJ6pgTunBMFEvNxCb193hgxXNySq130A8b87hf9FiFbJwixDacsAxwdkpvbLkPCOYQ4CfrOw3fELOeP8jtSM2B-xR6OeHDUtWmQP9BYckqR4Opbjp4KTYFNCDM4&token_type=Bearer&expires_in=3600")//document.location.href)
+if(data.length != 0){
+  prompt("Spotify API key", data[0].value);
+}
 colours = ["#49a078","#499ca0","#4970a0","#4d5da0","#7849a0","#a0499c","#a04970","#a04d49","#a07849","#9ca049","#70a049","#49a04d"]
 document.body.style.background = colours[0]
 fetch("https://api.github.com/users/keartland/repos?sort=%22updated%22").then(r => r.json()).then(function(data){
@@ -37,4 +40,16 @@ function nextColour(colours){
     counter = 0;
   }
   document.body.style.background = colours[counter];
+}
+
+function getAnchorData(url) {
+  regexExp = /^.+#([^?]+\=[^?]+)(\?.*){0,1}$/;
+  if (!regexExp.test(url)) return [];
+  result = regexExp.exec(url)[1];
+  data = [];
+  result.split('&').forEach(item => {
+      item = item.split('=');
+      data.push({ key: item[0], value: item[1] });
+  });
+  return data;
 }
